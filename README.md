@@ -8,8 +8,14 @@ Welcome to my portfolio! This project is a documentation of a **Blue Ribbon-styl
 - **Vibe:** Classy, slow-cooked, and very "chill."
 
 ## 🖼️ Visual Gallery
-![Pork Belly Hero](./static/img/hero.jpg)
-*Visualized by Gemini AI*
+![Hero](./static/img/hero.png)
+*Visualized by Gemini AI - The cinematic vibe of our Valentine's setup*
+
+### 🍲 The Cooking Journey
+| Kick & Chill | Sharing the Love | The Final Feast |
+| :---: | :---: | :---: |
+| ![Kick Chill](./static/img/kick_chill.png) | ![Sharing](./static/img/sharing.png) | ![Feast](./static/img/feast.png) |
+| *Initial prep & chill vibe* | *Plating for two* | *The Blue Ribbon result* |
 
 ## 🎵 Soundtrack
 To experience the full vibe, please play the background track:
