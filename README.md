@@ -1,11 +1,20 @@
-# 🌹 Blue Ribbon Confit Pork Belly (Valentine 2026)
+# 🌹 The Ash 2026 | Love & Reunion: Blue Ribbon Confit
 
-Welcome to my portfolio! This project is a documentation of a **Blue Ribbon-style** cooking experiment, blended with the unique linguistic style of **Lish**.
+**Live Demo:** [View Full Experience Here](https://alexanderkplo.github.io/valentines-2026-lish-confit/)
 
-## 📖 Project Overview
-- **Objective:** Recreating the classic French Confit technique for a Valentine's vibe.
-- **Tech Stack:** Git for documentation, Google Gemini for visual conceptualization.
-- **Vibe:** Classy, slow-cooked, and very "chill."
+---
+
+## 📖 Introduction
+This project is more than just a recipe; it is a documented **Experience Design** combining classical French culinary techniques with modern digital storytelling. 
+
+Centered around a **Blue Ribbon-style Confit Pork Belly**, this portfolio showcases the fusion of traditional craftsmanship and technical documentation, narrated in the unique, cross-cultural linguistic style of **Lish (Cantonese-English hybrid)**.
+
+## 🚀 Project Highlights
+* **Concept:** A "Low & Slow" approach to both cooking and lifestyle, celebrating a Valentine’s Day and Lunar New Year reunion in the UK.
+* **Technical Stack:** * **Frontend:** Responsive UI with AOS (Animate on Scroll) for a cinematic feel.
+    * **Backend:** PHP-based RSVP system with JSON persistence (UK Corporate Standard).
+    * **AI Collaboration:** Visual conceptualization and asset generation via Google Gemini.
+* **Vibe:** Classy, meticulously planned, and "Target" (Authentic).
 
 ## 🖼️ Visual Gallery
 ![Hero](./static/img/hero.png)
