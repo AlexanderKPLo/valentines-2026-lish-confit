@@ -123,9 +123,10 @@
 
 <section class="hero">
     <div data-aos="fade-up">
-        <h2>年廿七 ‧ 情人節：團圓愛筵</h2>
-        <p style="letter-spacing: 3px; margin-bottom: 30px;">FEBRUARY 14, 2026 | UK</p>
-        <a href="#rsvp-form" class="btn-ghost">快速認領菜單 RSVP Now</a>
+        <h2>Valentine's Feast 2026</h2>
+        <h3 style="font-family: 'Noto Sans TC'; font-weight: 300;">年廿七 ‧ 團圓愛筵</h3>
+        <p style="letter-spacing: 3px; margin: 20px 0 30px 0;">FEBRUARY 14, 2026 | UNITED KINGDOM</p>
+        <a href="#rsvp-form" class="btn-ghost">RSVP & Claim a Dish</a>
     </div>
 </section>
 
@@ -138,7 +139,8 @@
         <div class="event-content" data-aos="fade-left">
             <span class="time">15:00 - 16:30</span>
             <h3>Kick & Chill Session ⚽️🌳</h3>
-            <p>在 Ash 的清新空氣中舒展。無論是在公園踢波，還是提早到室內相聚聊天，這都是最愜意的開場。若天氣不佳，我們將在室內展開 Switch Sports 對決！</p>
+            <p>Kick off the festivities in the fresh air of Ash. Whether it's a casual kickabout in the park or an indoor chat, it’s the perfect start to our reunion.</p>
+            <p><small>年廿七開場：在公園舒展身心，或在室內提前相聚聊天。</small></p>
             <p><small>Friendly reminder: Bring trainers for the park! 👟</small></p>
         </div>
     </section>
@@ -151,7 +153,8 @@
         <div class="event-content" data-aos="fade-right">
             <span class="time">16:30 - 18:00</span>
             <h3>Lunar New Year Vibes 🧧</h3>
-            <p>享受濃厚的賀年氣氛與溫馨分享。我們一起準備美食、閒談近況，背景播放著賀歲電影。這段時光，屬於心與心的連結。</p>
+            <p>Immerse yourself in the warm atmosphere of the Lunar New Year. A time for heartfelt sharing, food prep, and classic festive cinema.</p>
+            <p><small>濃厚的賀年氣氛與溫馨分享，屬於心與心的連結。</small></p>
         </div>
     </section>
 
@@ -163,7 +166,8 @@
         <div class="event-content" data-aos="fade-left">
             <span class="time">18:00 - 21:00</span>
             <h3>Grand Family Feast 🍱</h3>
-            <p>今晚的主角——自助式團圓大餐。每位大廚認領的拿手好菜將逐一上桌。慶祝年廿七的相聚，也預祝彼此的情人節甜蜜圓滿。</p>
+            <p>The main event—a signature potluck banquet. Celebrating the reunion of the "Ash Family" and the spirit of Valentine's Day.</p>
+            <p><small>今晚的主角：自助式團圓大餐，慶祝年廿七與情人節的相聚。</small></p>
         </div>
     </section>
 </div>
@@ -177,19 +181,23 @@
     <div class="form-section" id="rsvp-form" data-aos="fade-up">
         <h3 style="text-align:center; font-size: 1.8rem;">RSVP & Dish Claim</h3>
         <form action="submit.php" method="POST">
-            <label>家庭代表 Name</label>
+            <label>Representing Name (家庭/代表名稱)</label>
             <input type="text" name="name" required placeholder="e.g. Alex & Family">
-            <label>預計抵達 Arrival Time</label>
+            
+            <label>Estimated Arrival (預計抵達時間)</label>
             <select name="arrival_time">
                 <option value="15:00">15:00 (Kick & Chill)</option>
                 <option value="16:30">16:30 (Lunar Vibes)</option>
                 <option value="18:00">18:00 (Grand Feast)</option>
             </select>
-            <label>認領佳餚 Dishes (Max 2)</label>
-            <input type="text" name="dish[]" placeholder="Dish 1" required>
+            
+            <label>Claim Your Dishes (認領菜式 - Max 2)</label>
+            <input type="text" name="dish[]" placeholder="Dish 1 (e.g. Confit Pork Belly)" required>
             <input type="text" name="dish[]" placeholder="Dish 2 (Optional)">
-            <label style="color:var(--deep-red)">活動暗號 Secret Code</label>
-            <input type="password" name="passcode" required placeholder="請輸入暗號">
+            
+            <label style="color:var(--deep-red)">Event Passcode (活動暗號)</label>
+            <input type="password" name="passcode" required placeholder="Enter secret code">
+            
             <button type="submit" class="btn-submit">Confirm Presence</button>
             <p style="text-align:center; font-size: 0.8rem; color: #999; margin-top:15px;">Deadline: 14 Feb 23:59 GMT</p>
         </form>
