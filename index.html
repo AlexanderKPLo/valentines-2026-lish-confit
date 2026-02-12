@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ash 2026 | Love & Reunion</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://beensea.com/valentines2026/">
+    <meta property="og:title" content="The Ash 2026 | 年廿七 ‧ 團圓愛筵">
+    <meta property="og:description" content="誠邀你參加 Ash 家族的情人節 Potluck 晚宴，一起分享美食與愛。">
+    <meta property="og:image" content="https://beensea.com/valentines2026/static/img/thumb.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://beensea.com/valentines2026/static/img/thumb.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { --gold: #D4AF37; --deep-red: #8B0000; --cream: #FFFDF5; --overlay: rgba(0, 0, 0, 0.4); }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Noto Sans TC', sans-serif; background: var(--cream); color: #333; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* Splash Screen */
+        #splash { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--deep-red); color: var(--gold); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 2000; transition: opacity 1s; }
+        #splash h1 { font-family: 'Playfair Display', serif; font-size: 3rem; letter-spacing: 8px; }
+
+	.hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            background: linear-gradient(var(--overlay), var(--overlay)), url('static/img/hero.png') center/cover fixed; 
+            color: white; 
+            padding: 20px; 
+	    background-attachment: scroll;
+        }
+	@media (max-width: 768px) {
+    	    .hero {
+        	background-attachment: scroll; /* 手機版關閉 fixed 效果，避免破圖 */
+        	background-position: center center; /* 確保人像或主題居中 */
+    	    }    
+    	    .hero h2 {
+        	font-size: 2rem; /* 手機版標題縮小一點，避免遮擋太多背景 */
+       	    }
+	}
+        .hero h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .btn-ghost { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 12px 40px; font-size: 1.1rem; cursor: pointer; border-radius: 30px; transition: 0.3s; font-weight: bold; text-decoration: none; margin-bottom: 40px; display: inline-block; }
+        .btn-ghost:hover { background: var(--gold); color: white; }
+        
+        /* Z-Pattern Sections */
+        .event-section { display: flex; flex-wrap: wrap; align-items: center; min-height: 500px; }
+        .event-image { flex: 1; min-width: 350px; height: 500px; position: relative; overflow: hidden; }
+        .event-image img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .image-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: var(--overlay); display: flex; justify-content: center; align-items: center; color: var(--gold); font-size: 4rem; opacity: 0.8; }
+        .event-content { flex: 1; min-width: 350px; padding: 80px; }
+        .event-content h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--deep-red); margin-bottom: 15px; }
+        .time { font-weight: bold; color: var(--gold); letter-spacing: 2px; display: block; margin-bottom: 20px; }
+        .reverse { flex-direction: row-reverse; }
+
+        /* Container for Menu & Form */
+        .container { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+        .menu-card { background: white; padding: 40px; border-radius: 4px; border-top: 10px solid var(--deep-red); box-shadow: 0 15px 40px rgba(0,0,0,0.05); margin-bottom: 80px; }
+        .live-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .dish-tag { border-left: 4px solid var(--gold); padding-left: 20px; margin-bottom: 20px; }
+
+        /* RSVP Form */
+        .form-section { background: #fff; padding: 50px; border: 1px solid #eee; border-radius: 8px; }
+        label { display: block; margin-top: 20px; font-weight: bold; }
+        input, select { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .btn-submit { background: var(--deep-red); color: white; border: none; padding: 20px; font-size: 1.2rem; cursor: pointer; width: 100%; font-weight: bold; letter-spacing: 2px; margin-top: 30px; transition: 0.3s; }
+        .btn-submit:hover { background: #600; }
+
+        /* Floating Action Button */
+        #fab { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: var(--deep-red); color: var(--gold); border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 1500; transition: 0.3s; opacity: 0; visibility: hidden; }
+
+        @media (max-width: 768px) { .event-content { padding: 40px 20px; } .event-image { height: 350px; } .hero h2 { font-size: 2rem; } }
+	@keyframes rotate {
+	    from { transform: rotate(0deg); }
+    	    to { transform: rotate(360deg); }
+	}
+	.playing {
+    	    animation: rotate 3s linear infinite;
+	}
+    </style>
+</head>
+
+<audio id="romanticMusic" loop>
+    <source src="static/audio/bgm.mp3" type="audio/mpeg">
+</audio>
+
+<div id="musicControl" style="position: fixed; bottom: 30px; left: 30px; z-index: 1000; cursor: pointer; background: rgba(255,255,255,0.7); padding: 10px; border-radius: 50%; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <span id="musicIcon">🎵</span>
+</div>
+
+<script>
+    const music = document.getElementById('romanticMusic');
+    const control = document.getElementById('musicControl');
+    const icon = document.getElementById('musicIcon');
+
+    control.onclick = function() {
+        if (music.paused) {
+            music.play();
+            icon.innerText = '🎶';
+            control.classList.add('playing'); // 👈 加了這行
+        } else {
+            music.pause();
+            icon.innerText = '🎵';
+            control.classList.remove('playing'); // 👈 加了這行
+        }
+    };
+</script>
+
+<body>
+
+<div id="splash">
+    <h1>THE ASH</h1>
+    <p>Loading the Feast...</p>
+</div>
+
+<section class="hero">
+    <div data-aos="fade-up">
+        <h2>年廿七 ‧ 情人節：團圓愛筵</h2>
+        <p style="letter-spacing: 3px; margin-bottom: 30px;">FEBRUARY 14, 2026 | UK</p>
+        <a href="#rsvp-form" class="btn-ghost">快速認領菜單 RSVP Now</a>
+    </div>
+</section>
+
+<div id="schedule">
+    <section class="event-section">
+        <div class="event-image" data-aos="fade-right">
+            <img src="static/img/kick_chill.png" alt="Kick & Chill">
+            <div class="image-overlay"><i class="fas fa-football-ball"></i></div>
+        </div>
+        <div class="event-content" data-aos="fade-left">
+            <span class="time">15:00 - 16:30</span>
+            <h3>Kick & Chill Session ⚽️🌳</h3>
+            <p>在 Ash 的清新空氣中舒展。無論是在公園踢波，還是提早到室內相聚聊天，這都是最愜意的開場。若天氣不佳，我們將在室內展開 Switch Sports 對決！</p>
+            <p><small>Friendly reminder: Bring trainers for the park! 👟</small></p>
+        </div>
+    </section>
+
+    <section class="event-section reverse">
+        <div class="event-image" data-aos="fade-left">
+            <img src="static/img/sharing.png" alt="Lunar Vibes">
+            <div class="image-overlay"><i class="fas fa-envelope-open-text"></i></div>
+        </div>
+        <div class="event-content" data-aos="fade-right">
+            <span class="time">16:30 - 18:00</span>
+            <h3>Lunar New Year Vibes 🧧</h3>
+            <p>享受濃厚的賀年氣氛與溫馨分享。我們一起準備美食、閒談近況，背景播放著賀歲電影。這段時光，屬於心與心的連結。</p>
+        </div>
+    </section>
+
+    <section class="event-section">
+        <div class="event-image" data-aos="fade-right">
+            <img src="static/img/feast.png" alt="Grand Feast">
+            <div class="image-overlay"><i class="fas fa-utensils"></i></div>
+        </div>
+        <div class="event-content" data-aos="fade-left">
+            <span class="time">18:00 - 21:00</span>
+            <h3>Grand Family Feast 🍱</h3>
+            <p>今晚的主角——自助式團圓大餐。每位大廚認領的拿手好菜將逐一上桌。慶祝年廿七的相聚，也預祝彼此的情人節甜蜜圓滿。</p>
+        </div>
+    </section>
+</div>
+
+<div class="container">
+    <div class="menu-card" id="menu" data-aos="fade-up">
+        <h3 style="text-align:center; font-family:'Playfair Display'; font-size: 2rem;">Potluck Board</h3>
+        <div id="live-menu-list" class="live-menu">正在準備大廚名單...</div>
+    </div>
+
+    <div class="form-section" id="rsvp-form" data-aos="fade-up">
+        <h3 style="text-align:center; font-size: 1.8rem;">RSVP & Dish Claim</h3>
+        <form action="submit.php" method="POST">
+            <label>家庭代表 Name</label>
+            <input type="text" name="name" required placeholder="e.g. Alex & Family">
+            <label>預計抵達 Arrival Time</label>
+            <select name="arrival_time">
+                <option value="15:00">15:00 (Kick & Chill)</option>
+                <option value="16:30">16:30 (Lunar Vibes)</option>
+                <option value="18:00">18:00 (Grand Feast)</option>
+            </select>
+            <label>認領佳餚 Dishes (Max 2)</label>
+            <input type="text" name="dish[]" placeholder="Dish 1" required>
+            <input type="text" name="dish[]" placeholder="Dish 2 (Optional)">
+            <label style="color:var(--deep-red)">活動暗號 Secret Code</label>
+            <input type="password" name="passcode" required placeholder="請輸入暗號">
+            <button type="submit" class="btn-submit">Confirm Presence</button>
+            <p style="text-align:center; font-size: 0.8rem; color: #999; margin-top:15px;">Deadline: 14 Feb 23:59 GMT</p>
+        </form>
+    </div>
+</div>
+
+<div id="fab" onclick="document.getElementById('rsvp-form').scrollIntoView({behavior: 'smooth'})">
+    <i class="fas fa-edit"></i>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // 使用傳統語法確保兼容性
+    AOS.init({ duration: 1000, once: true });
+    
+    setTimeout(function() {
+        var splash = document.getElementById('splash');
+        if(splash) {
+            splash.style.opacity = '0';
+            setTimeout(function() { splash.style.display = 'none'; }, 1000);
+        }
+    }, 1500);
+
+    window.onscroll = function() {
+        var fab = document.getElementById('fab');
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            fab.style.opacity = "1"; fab.style.visibility = "visible";
+        } else {
+            fab.style.opacity = "0"; fab.style.visibility = "hidden";
+        }
+    };
+
+    function loadMenu() {
+        var list = document.getElementById('live-menu-list');
+        var url = 'dishes.json?v=' + new Date().getTime();
+        
+        fetch(url)
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (Array.isArray(data) && data.length > 0) {
+                    var html = '';
+                    for (var i = 0; i < data.length; i++) {
+                        var item = data[i];
+                        var dishesArr = item.dishes.filter(function(d){ return d.trim() !== ''; });
+                        var dishDisplay = dishesArr.join(' & ');
+                        if (!dishDisplay) dishDisplay = "餐單設計中...";
+                        
+                        html += '<div class="dish-tag">';
+                        html += '<strong>' + item.name + '</strong> <small style="color:#999;">(' + item.arrival + ')</small><br>';
+                        html += '<span style="color:var(--deep-red); display:inline-block; margin-top:5px;">' + dishDisplay + '</span>';
+                        html += '</div>';
+                    }
+                    list.innerHTML = html;
+                } else {
+                    list.innerHTML = '<p style="text-align:center; width:100%; color:#999;">目前尚無數據</p>';
+                }
+            })
+            .catch(function(e) {
+                list.innerHTML = '<p style="text-align:center; width:100%;">讀取失敗，請重新整理</p>';
+            });
+    }
+
+    window.onload = loadMenu;
+  
+    window.onload = function() {
+    	loadMenu(); // 執行原本的載入選單
+
+    	// 檢查 URL 有沒有錯誤訊息
+    	var urlParams = new URLSearchParams(window.location.search);
+    	if (urlParams.get('error') === 'wrong_pass') {
+        	alert('❌ 暗號不正確，請重新輸入！');
+   	 }	
+    	if (urlParams.get('status') === 'success') {
+        	alert('✅ 報名成功！期待當日與你相聚。');
+    	}
+    };
+</script>
+</body>
+</html>
